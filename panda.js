@@ -9,3 +9,14 @@ const cardStyle = document.querySelectorAll(".card");
 for(let i=0; i<cardStyle.length; i++){
     cardStyle[i].style.borderRadius="30px";
 }
+
+function buttonAdd(){
+    console.log("I am clicked");
+}
+
+const buyBtnCollection = document.getElementsByClassName('btn');
+for(buyBtn of buyBtnCollection){
+    buyBtn.addEventListener('click', function(event){
+        event.target.parentNode.removeChild(event.target);
+    })
+}
